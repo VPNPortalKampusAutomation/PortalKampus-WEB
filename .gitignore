@@ -5,3 +5,4 @@ assets/
 pyvenv.cfg
 report.html
 test_selftest.py
+reports.html
