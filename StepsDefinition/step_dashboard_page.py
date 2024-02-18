@@ -29,27 +29,37 @@ class StepDefFooter(MyGenericMethods, LocatorFooter, LocatorPrivacyPolicyAndTerm
     def __init__(self, driver):
         super().__init__(driver)
 
-    def check_terms_of_use_on_footer_indo(self):
+    def check_copyright_is_visible(self):
+        self.is_visible(self.LOC_COPYRIGHT_TXT)
+
+    def check_copyright_text_is_correct(self):
+        assert self.LOC_COPYRIGHT_TXT == "Copyright © 2024 Portal Kampus. All right reserved."
+    '''-----------------------------------------------------------------------------------------------'''
+    def check_terms_of_use_is_visible(self):
         self.is_visible(self.LOC_TERMOFUSE_TXT)
+
+    def check_terms_of_use_text_indo(self):
         assert self.LOC_TERMOFUSE_TXT == "Syarat Ketentuan Penggunaan"
 
-    def check_terms_of_use_on_footer_english(self):
-        self.is_visible(self.LOC_TERMOFUSE_TXT)
+    def check_terms_of_use_text_english(self):
         assert self.LOC_TERMOFUSE_TXT == "Terms of Use"
 
-    def click_terms_of_use_on_footer(self):
+    def click_terms_of_use(self):
         self.click_to(self.LOC_TERMOFUSE_TXT)
-
-    def check_privacy_policy_on_footer_indo(self):
+        # assert on term of use page (coming soon)
+    '''-----------------------------------------------------------------------------------------------'''
+    def check_privacy_policy_is_visible(self):
         self.is_visible(self.LOC_PRIVACYPOLCY_TXT)
+
+    def check_privacy_policy_text_indo(self):
         assert self.LOC_PRIVACYPOLCY_TXT == "Kebijakan Privasi"
 
-    def check_privacy_policy_on_footer_english(self):
-        self.is_visible(self.LOC_PRIVACYPOLCY_TXT)
+    def check_privacy_policy_text_english(self):
         assert self.LOC_PRIVACYPOLCY_TXT == "Privacy Policy"
 
-    def click_privacy_policy_on_footer(self):
+    def click_privacy_policy(self):
         self.click_to(self.LOC_PRIVACYPOLCY_TXT)
+        # assert on privacy page (coming soon)
 
 
 
