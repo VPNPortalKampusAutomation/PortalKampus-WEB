@@ -34,10 +34,12 @@ class StepDefFooter(MyGenericMethods, LocatorFooter, LocatorPrivacyPolicyAndTerm
         self.is_visible(self.LOC_PRIVACYPOLCY_TXT)
 
     def check_privacy_policy_text_indo(self):
-        assert self.LOC_PRIVACYPOLCY_TXT == "Kebijakan Privasi"
+        txt_privacy = self.get_element_text(self.LOC_PRIVACYPOLCY_TXT)
+        assert txt_privacy == "Kebijakan Privasi"
 
     def check_privacy_policy_text_english(self):
-        assert self.LOC_PRIVACYPOLCY_TXT == "Privacy Policy"
+        txt_privacy = self.get_element_text(self.LOC_PRIVACYPOLCY_TXT)
+        assert txt_privacy == "Privacy Policy"
 
     def click_privacy_policy(self):
         self.click_to(self.LOC_PRIVACYPOLCY_TXT)
