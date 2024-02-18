@@ -66,7 +66,7 @@ def setup_scope_class(request):
         web_driver = webdriver.Edge(service=Service(EdgeChromiumDriverManager().install()))
 
     web_driver.maximize_window()
-    web_driver.get(TestData.BASE_URL_STAGING)
+    web_driver.get(TestData.BASE_URL_TEMPORARY_DASHBOARD)
     request.cls.driver = web_driver
     yield
     web_driver.quit()
