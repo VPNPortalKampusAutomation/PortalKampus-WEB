@@ -1,7 +1,7 @@
 class TestData:
 
     """this is base of url"""
-    BASE_URL_STAGING = ""
+    BASE_URL_STAGING = "https://dashboard.vertical.id/dashboard"
     BASE_URL_UAT = ""
     BASE_URL_PROD = ""
 

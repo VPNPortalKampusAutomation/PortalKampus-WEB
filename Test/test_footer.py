@@ -1,11 +1,13 @@
 import pytest
 from StepsDefinition.step_footer import StepDefFooter
+from StepsDefinition.step_navbar import StepDefNavbarAllRole
 
 @pytest.mark.usefixtures("setup_scope_function")
 class TestFooter:
 
     def __init__(self):
         self.footer = StepDefFooter(self.driver)
+        self.navbar = StepDefNavbarAllRole(self.driver)
 
     def test_verify_theres_copyright(self):
         # this row will be place the step for login user
@@ -21,11 +23,12 @@ class TestFooter:
 
     def test_verify_termsofuse_text_indo_is_correct(self):
         # this row will be place the step for login user
+        self.navbar.change_language_to_indonesia()
         self.footer.check_terms_of_use_text_indo()
 
     def test_verify_termsofuse_text_english_is_correct(self):
         # this row will be place the step for login user
-        # this row will be place step for change language in navbar
+        self.navbar.change_language_to_english()
         self.footer.check_terms_of_use_text_english()
 
 

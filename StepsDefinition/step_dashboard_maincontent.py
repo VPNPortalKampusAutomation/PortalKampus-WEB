@@ -3,61 +3,23 @@ from Pages.basemethod import MyGenericMethods
 from Pages.loc_dashboard_page import *
 from Pages.loc_privacy_and_terms_page import *
 
-
-class StepDefSidebar(MyGenericMethods, LocatorSidebar):
+class StepDefAllRole(MyGenericMethods, LocatorMainContentAdminUniversity):
     pass
 
-class StepDefContentAdmUniv(MyGenericMethods, LocatorMainContentAdminUniversity):
+class StepDefContentAdmUniv(StepDefAllRole):
     pass
 
-class StepDefContentAdmFaculty(MyGenericMethods, LocatorMainContentAdminFaculty):
+class StepDefContentAdmFaculty(StepDefAllRole):
     pass
 
-class StepDefContentAdmMajor(MyGenericMethods, LocatorMainContentAdminMajor):
+class StepDefContentAdmMajor(StepDefAllRole):
     pass
 
-class StepDefContentLecturer(MyGenericMethods, LocatorMainContentLecturer):
+class StepDefContentLecturer(StepDefAllRole):
     pass
 
-class StepDefContentStudent(MyGenericMethods, LocatorMainContentStudent):
+class StepDefContentStudent(StepDefAllRole):
     pass
-
-class StepDefFooter(MyGenericMethods, LocatorFooter, LocatorPrivacyPolicyAndTermsofUse):
-
-    def __init__(self, driver):
-        super().__init__(driver)
-
-    def check_copyright_is_visible(self):
-        self.is_visible(self.LOC_COPYRIGHT_TXT)
-
-    def check_copyright_text_is_correct(self):
-        assert self.LOC_COPYRIGHT_TXT == "Copyright © 2024 Portal Kampus. All right reserved."
-    '''-----------------------------------------------------------------------------------------------'''
-    def check_terms_of_use_is_visible(self):
-        self.is_visible(self.LOC_TERMOFUSE_TXT)
-
-    def check_terms_of_use_text_indo(self):
-        assert self.LOC_TERMOFUSE_TXT == "Syarat Ketentuan Penggunaan"
-
-    def check_terms_of_use_text_english(self):
-        assert self.LOC_TERMOFUSE_TXT == "Terms of Use"
-
-    def click_terms_of_use(self):
-        self.click_to(self.LOC_TERMOFUSE_TXT)
-        # assert on term of use page (coming soon)
-    '''-----------------------------------------------------------------------------------------------'''
-    def check_privacy_policy_is_visible(self):
-        self.is_visible(self.LOC_PRIVACYPOLCY_TXT)
-
-    def check_privacy_policy_text_indo(self):
-        assert self.LOC_PRIVACYPOLCY_TXT == "Kebijakan Privasi"
-
-    def check_privacy_policy_text_english(self):
-        assert self.LOC_PRIVACYPOLCY_TXT == "Privacy Policy"
-
-    def click_privacy_policy(self):
-        self.click_to(self.LOC_PRIVACYPOLCY_TXT)
-        # assert on privacy page (coming soon)
 
 
 
