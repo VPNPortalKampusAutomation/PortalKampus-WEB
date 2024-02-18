@@ -1,5 +1,5 @@
 import pytest
-from StepsDefinition.step_dashboard_page import StepDefFooter
+from StepsDefinition.step_footer import StepDefFooter
 
 @pytest.mark.usefixtures("setup_scope_function")
 class TestFooter:
@@ -25,7 +25,7 @@ class TestFooter:
 
     def test_verify_termsofuse_text_english_is_correct(self):
         # this row will be place the step for login user
-        # this row will be place step for change language
+        # this row will be place step for change language in navbar
         self.footer.check_terms_of_use_text_english()
 
 

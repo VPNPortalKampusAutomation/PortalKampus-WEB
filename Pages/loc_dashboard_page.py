@@ -2,7 +2,9 @@ from selenium.webdriver.common.by import By
 
 
 class LocatorNavbar:
-    pass
+    LOC_DROPDOWN_LANGUANGE = (By.XPATH, "/html[1]/body[1]/nav[1]/div[1]/div[2]/button[1]/*[name()='svg'][1]")
+    LOC_ENGLISH_SELECT= (By.XPATH, "//p[@class='MuiTypography-root MuiTypography-body-sm joy-1bdd33t']")
+    LOC_INDONESIA_SELECT = (By.XPATH, "//li[@id=':rn:']//div[@class='MuiStack-root joy-1ryzfwd']")
 
 class LocatorMainContentAdminUniversity:
     pass

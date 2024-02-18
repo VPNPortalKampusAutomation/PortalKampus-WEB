@@ -3,8 +3,6 @@ from Pages.basemethod import MyGenericMethods
 from Pages.loc_dashboard_page import *
 from Pages.loc_privacy_and_terms_page import *
 
-class StepDefNavbar(MyGenericMethods, LocatorNavbar):
-    pass
 
 class StepDefSidebar(MyGenericMethods, LocatorSidebar):
     pass
