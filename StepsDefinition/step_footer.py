@@ -12,16 +12,19 @@ class StepDefFooter(MyGenericMethods, LocatorFooter, LocatorPrivacyPolicyAndTerm
         self.is_visible(self.LOC_COPYRIGHT_TXT)
 
     def check_copyright_text_is_correct(self):
-        assert self.LOC_COPYRIGHT_TXT == "Copyright © 2024 Portal Kampus. All right reserved."
+        text_copyright = self.get_element_text(self.LOC_COPYRIGHT_TXT)
+        assert text_copyright == "Copyright © 2024 Portal Kampus. All right reserved."
     '''-----------------------------------------------------------------------------------------------'''
     def check_terms_of_use_is_visible(self):
         self.is_visible(self.LOC_TERMOFUSE_TXT)
 
     def check_terms_of_use_text_indo(self):
-        assert self.LOC_TERMOFUSE_TXT == "Syarat Ketentuan Penggunaan"
+        txt_termsofuse = self.get_element_text(self.LOC_TERMOFUSE_TXT)
+        assert txt_termsofuse == "Syarat Ketentuan Penggunaan"
 
     def check_terms_of_use_text_english(self):
-        assert self.LOC_TERMOFUSE_TXT == "Terms of Use"
+        txt_termsofuse = self.get_element_text(self.LOC_TERMOFUSE_TXT)
+        assert txt_termsofuse == "Terms of Use"
 
     def click_terms_of_use(self):
         self.click_to(self.LOC_TERMOFUSE_TXT)

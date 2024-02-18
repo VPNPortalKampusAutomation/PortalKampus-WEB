@@ -2,7 +2,7 @@ import pytest
 from StepsDefinition.step_footer import StepDefFooter
 from StepsDefinition.step_navbar import StepDefNavbarAllRole
 
-@pytest.mark.usefixtures("setup_scope_function")
+@pytest.mark.usefixtures("setup_scope_class")
 class TestFooter:
 
     def test_verify_theres_copyright(self):
