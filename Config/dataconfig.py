@@ -5,6 +5,7 @@ class TestData:
     BASE_URL_UAT = ""
     BASE_URL_PROD = ""
     BASE_URL_TEMPORARY_DASHBOARD = "https://dashboard.vertical.id/dashboard"
+    BASE_URL_TEMPORARY_PROFILE_SETTING = "https://dashboard.vertical.id/profile-settings"
 
     # """this is all test data needed for verify/assert"""
 
