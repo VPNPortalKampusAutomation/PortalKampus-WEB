@@ -1,7 +1,7 @@
 from Config import dataconfig
 from Pages.basemethod import MyGenericMethods
-from Pages.loc_dashboard_page import *
-from Pages.loc_privacy_and_terms_page import *
+from Pages.dashboard import *
+from Pages.privacypolicy import *
 
 class StepDefAllRole(MyGenericMethods, LocatorMainContentAdminUniversity):
     pass

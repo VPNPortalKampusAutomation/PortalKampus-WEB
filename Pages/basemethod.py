@@ -41,39 +41,11 @@ class MyGenericMethods:
         element = WebDriverWait(self.driver, 30).until(EC.visibility_of_element_located(locator))
         return element
 
-    def count_element(self, locator):
-        element = WebDriverWait(self.driver, 30).until(EC.visibility_of_all_elements_located(locator))
-        return len(element)
-
     def drag_drop_element(self, input_source_locator, input_target_locator):
         actions = ActionChains(self.driver)
         source = self.find_element(input_source_locator)
         target = self.find_element(input_target_locator)
         actions.drag_and_drop(source, target).perform()
-
-    # def scroll_down_page(self):
-    #     self.driver.execute_script("window.scrollTo(190, document.documentElement.scrollHeight);")
-    #     time.sleep(1.5)  # Add a short delay to allow content loading (adjust as needed)
-    #
-    # def scroll_up_page(self):
-    #     # Scroll up to the top of the page
-    #     self.driver.execute_script("window.scrollTo(0, 0);")
-    #     time.sleep(1.5)
-
-    def scroll_down_page(self):
-        actions = ActionChains(self.driver)
-        actions.send_keys(Keys.PAGE_DOWN).perform()
-        time.sleep(1.5)  # Add a short delay to allow content loading (adjust as needed)
-
-    def scroll_up_page(self):
-        actions = ActionChains(self.driver)
-        actions.send_keys(Keys.PAGE_UP).perform()
-        time.sleep(1.5)  # Add a short delay to allow content loading (adjust as needed)
-
-    def move_to_element(self, locators):
-        actions = ActionChains(self.driver)
-        actions.move_to_element(self.find_element(locators)).perform()
-        time.sleep(1.5)
 
     def switch_frame(self, locator):
         WebDriverWait(self.driver, 30).until(EC.frame_to_be_available_and_switch_to_it(locator))
@@ -84,3 +56,20 @@ class MyGenericMethods:
     def accept_alert(self):
         alert_msg = self.driver.switch_to.alert
         alert_msg.accept()
+
+    def move_to_element(self, locators):
+        actions = ActionChains(self.driver)
+        actions.move_to_element(self.find_element(locators)).perform()
+        time.sleep(1.5)
+
+    def count_element(self, locator):
+        element = WebDriverWait(self.driver, 30).until(EC.visibility_of_all_elements_located(locator))
+        return len(element)
+
+    def scroll_down_page(self):
+        actions = ActionChains(self.driver)
+        actions.send_keys(Keys.PAGE_DOWN).perform()
+
+    def scroll_up_page(self):
+        actions = ActionChains(self.driver)
+        actions.send_keys(Keys.PAGE_UP).perform()

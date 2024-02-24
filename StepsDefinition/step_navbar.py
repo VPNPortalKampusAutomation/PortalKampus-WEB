@@ -1,6 +1,6 @@
 from Config import dataconfig
 from Pages.basemethod import MyGenericMethods
-from Pages.loc_dashboard_page import LocatorNavbar
+from Pages.dashboard import LocatorNavbar
 
 class StepDefNavbarAllRole(MyGenericMethods, LocatorNavbar):
 
@@ -8,15 +8,15 @@ class StepDefNavbarAllRole(MyGenericMethods, LocatorNavbar):
         super().__init__(driver)
 
     def click_dropdown_language(self):
-        self.click_to(self.LOC_DROPDOWN_LANGUANGE)
+        self.click_to(self.LOC_DROPDOWN_LANGUAGE)
 
     def change_language_to_english(self):
-        self.click_to(self.LOC_DROPDOWN_LANGUANGE)
-        self.click_to(self.LOC_ENGLISH_SELECT)
+        self.click_to(self.LOC_DROPDOWN_LANGUAGE)
+        self.click_to(self.LOC_SELECT_EN)
 
     def change_language_to_indonesia(self):
-        self.click_to(self.LOC_DROPDOWN_LANGUANGE)
-        self.click_to(self.LOC_INDONESIA_SELECT)
+        self.click_to(self.LOC_DROPDOWN_LANGUAGE)
+        self.click_to(self.LOC_SELECT_IN)
 
 
 '''-------------------------------------------------------------------------------------------'''
