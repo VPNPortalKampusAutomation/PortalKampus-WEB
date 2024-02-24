@@ -7,3 +7,4 @@ report.html
 test_selftest.py
 reports.html
 gcm-diagnose.log
+step_login_temporary.py
