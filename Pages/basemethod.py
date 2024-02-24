@@ -68,8 +68,21 @@ class MyGenericMethods:
 
     def scroll_down_page(self):
         actions = ActionChains(self.driver)
-        actions.send_keys(Keys.PAGE_DOWN).perform()
+        actions.send_keys(Keys.PAGE_DOWN)
+        actions.perform()
 
     def scroll_up_page(self):
         actions = ActionChains(self.driver)
-        actions.send_keys(Keys.PAGE_UP).perform()
+        actions.send_keys(Keys.PAGE_UP)
+        actions.perform()
+
+    def press_enter_keyboard(self):
+        actions = ActionChains(self.driver)
+        actions.send_keys(Keys.ENTER)
+        actions.perform()
+
+    def back_to_previous_page(self):
+        self.driver.back()
+
+    def forward_to_next_page(self):
+        self.driver.forward()
