@@ -16,8 +16,5 @@ class LocatorSettingProfile:
     LOC_NIK_FIELD = (By.XPATH, 'id=":r2u:"')
     LOC_SELECT_RELIGION = (By.XPATH, '//button[@id=":r2v:"]')
     LOC_MOTHER_NAME = (By.XPATH, '//input[@id=":rk:"]')
-<<<<<<< HEAD
-    
-=======
->>>>>>> 84d151a44000f9f9edce946a2eece76c7594e6ed
+    LOC_ADDRESS = (By, '')
 
