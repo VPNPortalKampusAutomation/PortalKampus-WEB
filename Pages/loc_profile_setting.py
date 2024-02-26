@@ -1,11 +1,5 @@
 from selenium.webdriver.common.by import By
 
-class LocatorNavbarProfile:
-
-    LOC_NAVBAR_PROFILE = (By.XPATH, '//button[@class="MuiMenuButton-root MuiMenuButton-variantPlain MuiMenuButton-colorNeutral MuiMenuButton-sizeMd joy-1bev472"]')
-    LOC_MENU_PROFILE = ()
-    LOC_MENU_LOGOUT = ()
-    LOC_MENU_HELPSUPPORT = ()
 
 class LocatorSettingProfile:
     LOC_PICTURE_UPLOADER = (By.XPATH, '//div[@class="MuiBox-root joy-lu7srx"]')
@@ -16,5 +10,8 @@ class LocatorSettingProfile:
     LOC_NIK_FIELD = (By.XPATH, 'id=":r2u:"')
     LOC_SELECT_RELIGION = (By.XPATH, '//button[@id=":r2v:"]')
     LOC_MOTHER_NAME = (By.XPATH, '//input[@id=":rk:"]')
-    LOC_ADDRESS = (By, '')
 
+class LocatorLogin:
+    LOC_USERNAME = (By.XPATH, '//input[@id=":r0:"]')
+    LOC_PASSWORD = (By.XPATH, '//input[@id=":r1:"]')
+    LOC_BUTTON_LOGIN = (By.XPATH, '//button[@class="MuiButton-root MuiButton-variantSolid MuiButton-colorCustomColor MuiButton-sizeMd LoginForgot_loginBtnDesktop__P2Why joy-1nu8kqb'']')
