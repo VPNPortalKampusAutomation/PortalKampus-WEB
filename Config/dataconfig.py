@@ -6,7 +6,9 @@ class TestData:
     BASE_URL_PROD = ""
     BASE_URL_TEMPORARY_DASHBOARD = "https://dashboard.vertical.id/dashboard"
 
-    # """this is all test data needed for verify/assert"""
+    """this is all test data needed for verify/assert"""
+
+    UNIVERSITY_NAME = ""
 
     """this is all credential account"""
     # General Password :

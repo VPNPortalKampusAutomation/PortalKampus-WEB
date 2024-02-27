@@ -1,11 +1,12 @@
+from StepsDefinition.step_login import StepLogin
 from StepsDefinition.step_footer import StepDefFooter
 from StepsDefinition.step_navbar import StepDefNavbarAllRole
 from StepsDefinition.step_privacy_termsofuse import *
 
 class ObjectInstantiation:
-    # def login(self):
-    #     login = StepDefLogin(self.driver)
-    #     return login
+    def login(self):
+        login = StepLogin(self.driver)
+        return login
 
     def navbar(self):
         navbar = StepDefNavbarAllRole(self.driver)
