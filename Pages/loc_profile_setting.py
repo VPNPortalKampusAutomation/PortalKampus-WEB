@@ -11,7 +11,3 @@ class LocatorSettingProfile:
     LOC_SELECT_RELIGION = (By.XPATH, '//button[@id=":r2v:"]')
     LOC_MOTHER_NAME = (By.XPATH, '//input[@id=":rk:"]')
 
-class LocatorLogin:
-    LOC_USERNAME = (By.XPATH, '//input[@id=":r0:"]')
-    LOC_PASSWORD = (By.XPATH, '//input[@id=":r1:"]')
-    LOC_BUTTON_LOGIN = (By.XPATH, '//button[@class="MuiButton-root MuiButton-variantSolid MuiButton-colorCustomColor MuiButton-sizeMd LoginForgot_loginBtnDesktop__P2Why joy-1nu8kqb'']')
