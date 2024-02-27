@@ -3,6 +3,7 @@ from Pages.basemethod import MyGenericMethods
 from Pages.dashboard import LocatorFooter
 from StepsDefinition.step_privacy_termsofuse import StepDefPrivacyPolicyPage
 
+
 class StepDefFooter(LocatorFooter, StepDefPrivacyPolicyPage):
 
     def __init__(self, driver):
