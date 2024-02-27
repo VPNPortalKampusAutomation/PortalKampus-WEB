@@ -1,9 +1,9 @@
 from Config import dataconfig
 from Pages.basemethod import MyGenericMethods
-from Pages.loc_dashboard_page import LocatorFooter
-from Pages.loc_privacy_and_terms_page import *
+from Pages.dashboard import LocatorFooter
+from StepsDefinition.step_privacy_termsofuse import StepDefPrivacyPolicyPage
 
-class StepDefFooter(MyGenericMethods, LocatorFooter, LocatorPrivacyPolicyAndTermsofUse):
+class StepDefFooter(LocatorFooter, StepDefPrivacyPolicyPage):
 
     def __init__(self, driver):
         super().__init__(driver)
@@ -28,7 +28,8 @@ class StepDefFooter(MyGenericMethods, LocatorFooter, LocatorPrivacyPolicyAndTerm
 
     def click_terms_of_use(self):
         self.click_to(self.LOC_TERMOFUSE_TXT)
-        # assert on term of use page (coming soon)
+        self.check_menu_syaratketentuanpenggunaan_is_visible()
+
     '''-----------------------------------------------------------------------------------------------'''
     def check_privacy_policy_is_visible(self):
         self.is_visible(self.LOC_PRIVACYPOLCY_TXT)
@@ -43,7 +44,7 @@ class StepDefFooter(MyGenericMethods, LocatorFooter, LocatorPrivacyPolicyAndTerm
 
     def click_privacy_policy(self):
         self.click_to(self.LOC_PRIVACYPOLCY_TXT)
-        # assert on privacy page (coming soon)
+        self.check_menu_kebijakan_privasi_is_visible()
 
 
 
